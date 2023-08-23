@@ -30,21 +30,39 @@
             @media screen {
                 /* latin */
                 @font-face {
-                    font-family: 'Inter';
+                    font-family: 'Manrope';
                     font-style: normal;
                     font-weight: 400;
                     font-display: swap;
-                    src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format('woff2');
-                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                    src: url(https://fonts.gstatic.com/s/manrope/v14/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
                 }
                 /* latin */
                 @font-face {
-                    font-family: 'Inter';
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-display: swap;
+                    src: url(https://fonts.gstatic.com/s/manrope/v14/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+                /* latin */
+                @font-face {
+                    font-family: 'Manrope';
                     font-style: normal;
                     font-weight: 700;
                     font-display: swap;
-                    src: url(https://fonts.gstatic.com/s/inter/v12/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2) format('woff2');
-                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                    src: url(https://fonts.gstatic.com/s/manrope/v14/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+                }
+                /* latin */
+                @font-face {
+                    font-family: 'Manrope';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-display: swap;
+                    src: url(https://fonts.gstatic.com/s/manrope/v14/xn7gYHE41ni1AdIRggexSg.woff2) format('woff2');
+                    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
                 }
             }
         </style>
@@ -133,7 +151,11 @@
                 .tPad-0  { padding-top:   0 !important; }
                 .lPad-0  { padding-left:  0 !important; }
                 .rPad-0  { padding-right: 0 !important; }
-                .bPad-30 { padding-bottom: 30px !important; }
+                .tbPad-16 { padding-top: 16px !important; padding-bottom: 16px !important; }
+
+                .logo {font-size: 36px !important;}
+                .hideMobile { display: none !important; }
+               
             }
         </style>
 
@@ -154,15 +176,19 @@
                 }
 
                 /* Hides Light Mode-Only Content, Like Images */
-                .light-img { display: none; display: none !important; }
+                .light-img { display: none !important; }
 
                 /* Custom Dark Mode Background Color */
-                .darkmode  { background-color: #03051A !important; }
-                .darkmode2 { background-color: #17192E !important; }
-                .darkmode3 { background-color: #2B2D42 !important; }
+                .darkmodeBG1    { background-color: #3F2305 !important; }
+                .darkmodeBG2    { background-color: #F5F5F5 !important; }
+                .darkmodeBG3    { background-color: #2B2D42 !important; }
+                .darkmodeMainBg { background-color: #0A0A0A !important; }
+
+
+                .darkmodeColor2 { color: #3F2305 !important;}
 
                 /* Custom Dark Mode Font Colors */
-                h1, h2, h3, p, span, a { color: #EDF2F4 !important; }
+                /* h1, h2, h3, p, span, a { color: #EDF2F4 !important; } */
             }
 
             /* Copy dark mode styles for android support */
@@ -183,7 +209,7 @@
             [data-ogsc] .light-img { display: none; display: none !important; }
 
             /* Custom Dark Mode Background Color */
-            [data-ogsc] .darkmode  { background-color: #100E11 !important; }
+            [data-ogsc] .darkmode  { background-color: #222222 !important; }
             [data-ogsc] .darkmode2 { background-color: #020203 !important; }
             [data-ogsc] .darkmode3 { background-color: #222023 !important; }
 
@@ -213,31 +239,56 @@
         <![endif]-->
     </head>
 
-    <body class="body body-fix" xml:lang="en" style="font-family: 'Inter'">
-        <div role="article" aria-roledescription="email" aria-label="Email from Sage Apparel" lang="en" dir="ltr" style="font-family: 'Inter'">
+    <body class="body body-fix" xml:lang="en" style="font-family: 'Manrope', Arial, Helvetica, sans-serif; color: #3F2305">
+        <div role="article" aria-roledescription="email" aria-label="Email from Sage Apparel" lang="en" dir="ltr" style="font-family: 'Manrope', Arial, Helvetica, sans-serif; color: #3F2305">
             <!--hidden preheader with preh-header spacer hack-->
             <div style="display:none;">
                 &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
             </div>
-            <table align="center" class="darkmode" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100&" style="background: #cfdce2;">
+            <table class="darkmodeMainBg" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="background: #F5F5F5;">
                 <!-- MAIN CONTENT -->
                 <tr>
                     <td class="tPad-0" valign="top" style="padding: 32px 0;">
-                        <table class="w100p" border="0" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color: #ffffff;">  
+                        <table align="center" class="w100p" border="0" cellpadding="0" cellspacing="0" role="presentation" width="600" style="background-color: #F2EAD3;">  
+
+                            <!-- START of FREE SHIPPING +FREE RETURNS BANNER -->
+                            <tr>
+                                <td align="center" width="100%" style="padding: 2px 0; background-color: #3F2305;">
+                                  <span style="font-size: 14px; line-height: 20px; font-family: 'Manrope', Arial, Helvetica, sans-serif; letter-spacing: 2px; font-weight: 600; text-transform: uppercase; color: #F5F5F5;">free shipping +free returns</span>
+                                </td>
+                            </tr>
+                            <!-- END of FREE SHIPPING +FREE RETURNS BANNER -->
 
                             <!-- START of HEADER -->
                             <tr>
-                                <td align="left" height="88px" style="width: 552px; height: 88px; padding: 0 24px;">
-                                    <a class="light-img"  href="http://example.com" target="_blank" style="display: inline-block;">
-                                        <img src="https://mcusercontent.com/62ab5fc11c3226d9939eb036b/images/884ec297-f225-9ab2-b0d4-a4ae1d9da161.png" width="186" alt="Daily Sentry Logo">
-                                    </a>
-                                    <a class="dark-img" href="http://example.com" target="_blank" style="display: none;">
-                                        <img src="https://mcusercontent.com/62ab5fc11c3226d9939eb036b/images/61d7f6b4-b16b-88ec-aeb3-edd5550b0162.png" width="186" alt="Dark Daily Sentry Logo">
-                                    </a>
+                                <td class="tbPad-16" align="center" width="100%" style="padding: 24px 0 16px;">
+                                    <span class="logo" style="display: inline-block; font-size: 40px; line-height: 40px; font-family: 'Manrope', Arial, Helvetica, sans-serif; font-weight: 800; text-transform: uppercase;">Sage<span style="display: inline-block; font-weight: 400;">Apparel</span></span>
                                 </td>
                             </tr>
                             <!-- END of HEADER -->
 
+                            <!-- START of NAVIGATION -->
+                            <tr>  
+                                <td class="hideMobile" style="padding-bottom: 16px; border-bottom: 1px solid magenta;">
+                                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse!important;">
+                                        <tr>
+                                            <td align="left" valign="top" style="padding-right: 48px;">
+                                                <a style="font-size: 16px; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase; color: #3F2305;" href="https://www.facebook.com" target="blank">Top Deals</a>
+                                            </td>
+                                            <td align="left" valign="top" style="padding-right: 48px;">
+                                                <a style="font-size: 16px; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase; color: #3F2305;" href="https://www.youtube.com" target="blank">Sales</a>
+                                            </td>
+                                            <td align="left" valign="top" style="padding-right: 48px;">
+                                                <a style="font-size: 16px; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase; color: #3F2305;" href="https://www.instagram.com" target="blank">Clothing</a>
+                                            </td>
+                                            <td align="left" valign="top">
+                                                <a style="font-size: 16px; font-weight: 600; letter-spacing: 0.25px; text-transform: uppercase; color: #3F2305;" href="https://www.twitter.com" target="blank">Shoes</a>
+                                            </td>
+                                        </tr>
+                                      </table>
+                                </td>
+                            </tr>
+                            <!-- END of NAVIGATION -->
 
                         </table>
                     </td>
